@@ -1,18 +1,21 @@
-package Inheritance;
+package OOPS;
+public class Emp
+{
+	int empid;
+	String name;
+	double sal;
+	
+	public Emp(int empid, String name, double sal)
+	{
+		super();
+		this.empid=empid;
+		this.name=name;
+		this.sal=sal;
+	}
 
-public class Emp {
-  int id;
-  String name;
-  Double salary;
-  
-  public Emp(int id, String name, Double salary) {
-    super();
-    this.id = id;
-    this.name = name;
-    this.salary = salary;
-  }
-  @Override
-  public String toString() {
-    return "Emp [id=" + id + ", name=" + name + ", salary=" + salary + "]";
-  }
+	@Override
+	public String toString() {
+		return "Emp [empid=" + empid + ", name=" + name + ", sal=" + sal + "]";
+	}
+	
 }

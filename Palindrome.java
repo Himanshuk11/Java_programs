@@ -1,25 +1,31 @@
-/*Write a program to find whether a number entered by the user is a palindrome or not(example—121,151,131)*/ 
-package Basicprograms; 
-import java.util.*; 
-public class Palindrome
-{ 
-  public static void main(String[] args) 
-  { 
-    int rem,rev=0,term; 
-    Scanner sc=new Scanner(System.in); 
-    System.out.println("Enter a number:"); 
-    int n=sc.nextInt(); 
-    term=n; 
-    while(n!=0) 
-    { 
-      rem=n%10; 
-      rev=(rev*10)+rem; 
-      n=n/10; 
-    } 
-    if(term==rev) 
-      System.out.println("It is palindrom number:"); 
-    else 
-      System.out.println("It is not a palindrom number:"); 
-     
-  } 
+package OOPS;
+public class Palindrome {
+    
+    public static boolean isPalindrome(String str)
+    {
+        String normalizedStr = str.toLowerCase().replaceAll("[^a-z0-9]", "");
+
+        int left = 0;
+        int right = normalizedStr.length() - 1;
+
+        while (left < right) {
+            if (normalizedStr.charAt(left) != normalizedStr.charAt(right))
+            {
+                return false; 
+            }
+            left++;
+            right--;
+        }
+        return true; 
+    }
+
+    public static void main(String[] args) {
+        String testString = "A man, a plan, a canal, Panama";
+
+        if (isPalindrome(testString)) {
+            System.out.println("\"" + testString + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + testString + "\" is not a palindrome.");
+        }
+    }
 }

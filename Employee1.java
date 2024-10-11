@@ -1,18 +1,21 @@
-package Inheritance;
-import java.util.*;
+package OOPS;
+
 public class Employee1
 {
 	int empid;
-	String empname;
-	double salary;
-	
-	void acceptemp()
+	String name;
+	float sal;
+
+	void accept()
 	{
-		Scanner sc=new Scanner(System.in);
-				System.out.println("Enter id,name of employee: ");
-				empid=sc.nextInt();
-				empname=sc.next();
+		empid=101;
+		name="Himanshu";
+		sal=50000;
+	}
+	void display()
+	{
+		System.out.println("Employee Details are as follows: ");
+		System.out.println("ID="+empid+"\tName="+name+"\tSal="+sal);
 	}
 }
-		
-//create a class employee with data members emp id emp name and salary create another class department with data members dep id, deo name and the department must perform aggregation with employee	
+
